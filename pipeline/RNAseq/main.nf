@@ -11,11 +11,11 @@
 nextflow.enable.dsl=2
 
 // Use baseDir for relative paths
-include { process_fastqc; process_fastqc as process_fastqc_clean } from "../../modules/qc/process_fastqc.nf"
-include { process_multiqc; process_multiqc as process_multiqc_clean } from "../../modules/qc/process_multiqc.nf"
-include { process_fastp } from "../../modules/qc/process_fastp.nf"
-include { process_star } from "../../modules/reference_map/process_star.nf"
-include { process_featurecount; process_featurecount_merge } from "../../modules/quantify/process_featurecount.nf"
+include { process_fastqc; process_fastqc as process_fastqc_clean } from "${projectDir}/../../modules/qc/process_fastqc.nf"
+include { process_multiqc; process_multiqc as process_multiqc_clean } from "${projectDir}/../../modules/qc/process_multiqc.nf"
+include { process_fastp } from "${projectDir}/../../modules/qc/process_fastp.nf"
+include { process_star } from "${projectDir}/../../modules/reference_map/process_star.nf"
+include { process_featurecount; process_featurecount_merge } from "${projectDir}/../../modules/quantify/process_featurecount.nf"
 
 // read channel
 Channel

@@ -22,3 +22,6 @@
     # construct pipeline is used to construct the pipeline automatically
         # according to the construct_info file
         # read up the construct_info file, and use the corresponding function, then echo to the pipeline file
+
+# when place main.nf and nextflow.config together
+    # then nextflow run main.nf will automatically load the nextflow.config in the same depth
